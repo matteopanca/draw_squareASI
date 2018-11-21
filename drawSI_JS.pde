@@ -23,10 +23,10 @@ int firstLeftCoordX, firstLeftCoordY, firstBottomCoordX, firstBottomCoordY;
 int stepX, stepY;
 
 //dimensione della finestra in nm
-float dimX = 1800, dimY = dimX;
+float dimX = 1500, dimY = dimX;
 
 //numero di pixels
-int sizeX = 600, sizeY = 600;
+int sizeX = 500, sizeY = sizeX;
 
 //definizione colori varie strutture
 color universe = color(160,160,160);
@@ -96,54 +96,54 @@ void mousePressed()
       case LEFT: switch(tipoStruttura[savedIndex])
                  {
                    case 0: if (dotVerticale) direzione = 3;
-                             else direzione = 2;
-                             drawArrow(centroXTrovato,centroYTrovato,direzione);
-                             tipoStruttura[savedIndex] = direzione;
-                             struttureCatalogate++;
-                             break;
+                           else direzione = 2;
+                           drawArrow(centroXTrovato,centroYTrovato,direzione);
+                           tipoStruttura[savedIndex] = direzione;
+                           struttureCatalogate++;
+                           break;
                              
                    case 1:
                    case 4: fill(structure);
-                             if (dotVerticale)
-                             {
-                               rect(centroXTrovato,centroYTrovato,RTP(asseMinore),RTP(asseMaggiore),RTP(asseMinore)/2);
-                               direzione = 3;
-                             }
-                             else
-                             {
-                               rect(centroXTrovato,centroYTrovato,RTP(asseMaggiore),RTP(asseMinore),RTP(asseMinore)/2);
-                               direzione = 2;
-                             }
-                             drawArrow(centroXTrovato,centroYTrovato,direzione);
-                             tipoStruttura[savedIndex] = direzione;
-                             break;
+                           if (dotVerticale)
+                           {
+                             rect(centroXTrovato,centroYTrovato,RTP(asseMinore),RTP(asseMaggiore),RTP(asseMinore)/2);
+                             direzione = 3;
+                           }
+                           else
+                           {
+                             rect(centroXTrovato,centroYTrovato,RTP(asseMaggiore),RTP(asseMinore),RTP(asseMinore)/2);
+                             direzione = 2;
+                           }
+                           drawArrow(centroXTrovato,centroYTrovato,direzione);
+                           tipoStruttura[savedIndex] = direzione;
+                           break;
                  }
                  break;
                  
       case RIGHT: switch(tipoStruttura[savedIndex])
                  {
                    case 0: if (dotVerticale) direzione = 4;
-                             else direzione = 1;
-                             drawArrow(centroXTrovato,centroYTrovato,direzione);
-                             tipoStruttura[savedIndex] = direzione;
-                             struttureCatalogate++;
-                             break;
+                           else direzione = 1;
+                           drawArrow(centroXTrovato,centroYTrovato,direzione);
+                           tipoStruttura[savedIndex] = direzione;
+                           struttureCatalogate++;
+                           break;
                              
                    case 2:
                    case 3: fill(structure);
-                             if (dotVerticale)
-                             {
-                               rect(centroXTrovato,centroYTrovato,RTP(asseMinore),RTP(asseMaggiore),RTP(asseMinore)/2);
-                               direzione = 4;
-                             }
-                             else
-                             {
-                               rect(centroXTrovato,centroYTrovato,RTP(asseMaggiore),RTP(asseMinore),RTP(asseMinore)/2);
-                               direzione = 1;
-                             }
-                             drawArrow(centroXTrovato,centroYTrovato,direzione);
-                             tipoStruttura[savedIndex] = direzione;
-                             break;
+                           if (dotVerticale)
+                           {
+                             rect(centroXTrovato,centroYTrovato,RTP(asseMinore),RTP(asseMaggiore),RTP(asseMinore)/2);
+                             direzione = 4;
+                           }
+                           else
+                           {
+                             rect(centroXTrovato,centroYTrovato,RTP(asseMaggiore),RTP(asseMinore),RTP(asseMinore)/2);
+                             direzione = 1;
+                           }
+                           drawArrow(centroXTrovato,centroYTrovato,direzione);
+                           tipoStruttura[savedIndex] = direzione;
+                           break;
                  }
                  break;
                    
